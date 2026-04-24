@@ -1,19 +1,20 @@
 package com.example.dclassic;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.Arrays;
 import java.util.List;
-
-import android.os.Handler;
-import android.os.Looper;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.core.view.GravityCompat;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+        // CAROUSEL
         pager = findViewById(R.id.viewPager);
 
         List<Integer> images = Arrays.asList(
@@ -36,8 +38,12 @@ public class HomeActivity extends AppCompatActivity {
         StoreAdapter adapter = new StoreAdapter(images);
         pager.setAdapter(adapter);
 
-        ImageButton rightBtn = findViewById(R.id.rightBtn);
-        ImageButton leftBtn = findViewById(R.id.leftBtn);
+
+        ImageButton rightBtn =
+                findViewById(R.id.rightBtn);
+
+        ImageButton leftBtn =
+                findViewById(R.id.leftBtn);
 
         rightBtn.setOnClickListener(v -> {
             if (pager.getCurrentItem() < images.size()-1) {
@@ -57,13 +63,18 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler(Looper.getMainLooper());
+
+        // AUTO SLIDE
+        Handler handler =
+                new Handler(Looper.getMainLooper());
 
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
+
                 int next =
-                        (pager.getCurrentItem()+1)%images.size();
+                        (pager.getCurrentItem()+1)
+                                % images.size();
 
                 pager.setCurrentItem(next,true);
 
@@ -73,14 +84,61 @@ public class HomeActivity extends AppCompatActivity {
 
         handler.postDelayed(runnable,3000);
 
-        DrawerLayout drawerLayout;
-        ImageButton menuBtn;
+        DrawerLayout drawerLayout =
+                findViewById(R.id.drawerLayout);
 
-        drawerLayout = findViewById(R.id.drawerLayout);
-        menuBtn = findViewById(R.id.menuBtn);
+        ImageButton menuBtn =
+                findViewById(R.id.menuBtn);
 
         menuBtn.setOnClickListener(v -> {
-            drawerLayout.openDrawer(GravityCompat.END);
+            drawerLayout.openDrawer(
+                    GravityCompat.END
+            );
         });
+
+        NavigationView navView =
+                findViewById(R.id.navView);
+
+        navView.setNavigationItemSelectedListener(item -> {
+
+            int id = item.getItemId();
+            if(id == R.id.nav_home){
+                drawerLayout.closeDrawer(
+                        GravityCompat.END
+                );
+            }
+            else if(id == R.id.nav_library){
+                startActivity(
+                    new Intent(
+                            HomeActivity.this,
+                            LibraryActivity.class
+                    )
+                );
+            }
+
+            else if(id == R.id.nav_store){
+                startActivity(
+                    new Intent(
+                            HomeActivity.this,
+                            StoreActivity.class
+                    )
+                );
+            }
+
+            else if(id == R.id.nav_profile){
+                startActivity(
+                    new Intent(
+                            HomeActivity.this,
+                            ProfileActivity.class
+                    )
+                );
+            }
+            drawerLayout.closeDrawer(
+                    GravityCompat.END
+            );
+
+            return true;
+        });
+
     }
 }

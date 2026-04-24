@@ -9,7 +9,7 @@
         android:title="Library"/>
 
     <item
-        android:id="@+id/nav_settings"
+        android:id="@+id/nav_store"
         android:title="Store"/>
 
     <item
