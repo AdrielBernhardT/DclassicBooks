@@ -6,9 +6,6 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- Floating Blue Top -->
-
-    <!-- Circle Logo -->
     <View
         android:id="@+id/topShape"
         android:layout_width="0dp"
@@ -39,7 +36,6 @@
         <!-- ganti pakai logo lu -->
     </androidx.cardview.widget.CardView>
 
-
     <TextView
         android:id="@+id/title"
         android:text="D'Classics Books"
@@ -53,7 +49,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-
     <TextView
         android:text="Where Timeless Books Live."
         android:textSize="16sp"
@@ -64,7 +59,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
 
     <Button
         android:id="@+id/startBtn"
@@ -80,5 +74,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

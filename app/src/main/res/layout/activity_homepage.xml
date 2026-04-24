@@ -3,19 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F7F7">
+    android:background="#FFFFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="24dp">
 
-
-        <!-- HEADER -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
 
             <ImageView
                 android:id="@+id/logo"
@@ -35,7 +34,8 @@
                 app:layout_constraintStart_toEndOf="@id/logo"
                 app:layout_constraintTop_toTopOf="@id/logo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                />
 
             <TextView
                 android:text="What would you like to read today?"
@@ -50,159 +50,208 @@
             <ImageView
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:src="@drawable/logo"
+                android:src="@drawable/notification"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/logo"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-        <!-- SEARCH -->
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:layout_marginTop="18dp"
-            android:hint="Search"
-            android:paddingStart="16dp"
+            android:textColor="#7091AD"
+            android:paddingStart="12dp"
             android:background="@drawable/search_bg"/>
 
-        <!-- CATEGORY CHIPS -->
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:scrollbars="none">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
                     android:text="Romance"
-                    android:background="@drawable/chip_bg"/>
+                    android:textSize="12sp"
+                    android:textColor="#E7E9EF"
+                    android:background="@drawable/chip_bg"
+                    app:backgroundTint="@null"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
                     android:text="Horror"
+                    android:textSize="12sp"
+                    android:textColor="#E7E9EF"
                     android:layout_marginStart="8dp"
-                    android:background="@drawable/chip_bg"/>
+                    android:background="@drawable/chip_bg"
+                    app:backgroundTint="@null"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
                     android:text="Fiction"
+                    android:textSize="12sp"
+                    android:textColor="#E7E9EF"
                     android:layout_marginStart="8dp"
-                    android:background="@drawable/chip_bg"/>
+                    android:background="@drawable/chip_bg"
+                    app:backgroundTint="@null"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
                     android:text="Non-Fiction"
+                    android:textSize="12sp"
+                    android:textColor="#E7E9EF"
                     android:layout_marginStart="8dp"
-                    android:background="@drawable/chip_bg"/>
+                    android:background="@drawable/chip_bg"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="Komedi"
+                    android:textSize="12sp"
+                    android:textColor="#E7E9EF"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/chip_bg"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="Teknologi"
+                    android:textSize="12sp"
+                    android:textColor="#E7E9EF"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/chip_bg"
+                    app:backgroundTint="@null"/>
 
             </LinearLayout>
 
         </HorizontalScrollView>
 
-
-
-        <!-- BOOK SECTION -->
         <TextView
             android:text="Top E-Book for you"
             android:textStyle="bold"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textColor="#7091AD"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
 
         <HorizontalScrollView
             android:contentDescription="Next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="none"
-            android:layout_marginTop="12dp">
+            android:scrollbars="none">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="140dp"
-                    android:src="@drawable/logo"/>
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="140dp"
-                    android:layout_marginStart="12dp"
-                    android:src="@drawable/logo"/>
+                    android:src="@drawable/book1"/>
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="140dp"
                     android:layout_marginStart="12dp"
-                    android:src="@drawable/logo"/>
+                    android:src="@drawable/book2"/>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/book3"/>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/book4"/>
 
             </LinearLayout>
 
         </HorizontalScrollView>
 
-        <!-- STORE -->
         <TextView
             android:text="Stores"
             android:textStyle="bold"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textColor="#7091AD"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageButton
+                android:id="@+id/leftBtn"
+                android:layout_width="18dp"
+                android:layout_height="38dp"
                 android:background="@null"
-                android:src="@drawable/logo"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="Next"
-                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/iconleft"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
-            <ImageView
-                android:id="@+id/storeImage"
-                android:src="@drawable/logo"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
                 android:layout_width="250dp"
                 android:layout_height="170dp"
+                app:layout_constraintStart_toEndOf="@id/leftBtn"
                 app:layout_constraintEnd_toStartOf="@id/rightBtn"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <ImageButton
                 android:id="@+id/rightBtn"
+                android:layout_width="18dp"
+                android:layout_height="38dp"
                 android:background="@null"
-                android:src="@drawable/logo"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="Next"
+                android:src="@drawable/iconright"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </LinearLayout>
 </ScrollView>
