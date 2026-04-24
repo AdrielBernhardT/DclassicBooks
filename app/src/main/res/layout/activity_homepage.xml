@@ -216,11 +216,56 @@
             </HorizontalScrollView>
 
             <TextView
+                android:text="New Collection"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#7091AD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/book5"/>
+
+                    <ImageView
+                        android:layout_marginStart="12dp"
+                        android:layout_width="90dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/book6"/>
+
+                    <ImageView
+                        android:layout_marginStart="12dp"
+                        android:layout_width="90dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/book7"/>
+
+                    <ImageView
+                        android:layout_marginStart="12dp"
+                        android:layout_width="90dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/book8"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
                 android:text="Stores"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#7091AD"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
