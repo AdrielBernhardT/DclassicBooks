@@ -33,7 +33,6 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/logo"/>
-        <!-- ganti pakai logo lu -->
     </androidx.cardview.widget.CardView>
 
     <TextView
