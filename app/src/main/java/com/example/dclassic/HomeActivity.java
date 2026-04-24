@@ -12,6 +12,9 @@ import java.util.List;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.core.view.GravityCompat;
+
 public class HomeActivity extends AppCompatActivity {
 
     private ViewPager2 pager;
@@ -69,5 +72,15 @@ public class HomeActivity extends AppCompatActivity {
         };
 
         handler.postDelayed(runnable,3000);
+
+        DrawerLayout drawerLayout;
+        ImageButton menuBtn;
+
+        drawerLayout = findViewById(R.id.drawerLayout);
+        menuBtn = findViewById(R.id.menuBtn);
+
+        menuBtn.setOnClickListener(v -> {
+            drawerLayout.openDrawer(GravityCompat.END);
+        });
     }
 }

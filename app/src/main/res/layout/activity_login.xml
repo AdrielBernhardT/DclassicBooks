@@ -65,7 +65,11 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Enter email"/>
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:hint="Enter email"
+                android:textColor="#7091AD"
+                android:background="@drawable/border"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -79,8 +83,12 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:textColor="#7091AD"
                 android:hint="Enter password"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:background="@drawable/border"/>
 
             <TextView
                 android:text="Forgot Password?"
@@ -96,7 +104,7 @@
                 android:id="@+id/startBtn"
                 android:text="Login"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="45dp"
                 android:textColor="#E7E9EF"
                 android:textSize="18dp"
                 android:textStyle="bold"
