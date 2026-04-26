@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 🔙 Back -->
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="< Back"
+            android:textStyle="bold"
+            android:textColor="#6B8BA4"
+            android:textSize="16sp"
+            android:paddingBottom="4dp"/>
+
+        <!-- 📘 Section Image + Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="30dp"
+            android:layout_marginBottom="8dp">
+
+            <!-- 📘 Book Image -->
+            <ImageView
+                android:id="@+id/imgBook"
+                android:layout_width="150dp"
+                android:layout_height="230dp"
+                android:layout_gravity="left"
+                android:layout_marginBottom="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/book9" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 📖 Title -->
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diary Of A Wimpy Kid"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#EF9D7F"
+                    android:layout_marginBottom="4dp"/>
+
+                <!-- ✍️ Author -->
+                <TextView
+                    android:id="@+id/txtAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="by Jeff Kinney"
+                    android:textColor="#7091AD" />
+
+                <!-- Synopsis -->
+                <TextView
+                    android:id="@+id/txtSynopsis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Synopsis"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#EF9D7F" />
+
+                <!-- 📄 Description -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="In order to gain recognition and escape from some of the difficulties of being a high school teenager, Greg Heffley tries to write down all his feelings in a diary."
+                    android:textSize="13sp"
+                    android:textColor="#7091AD"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 🏷️ Tag -->
+
+        <TextView
+            android:id="@+id/txtSynopsis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Tags"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#EF9D7F" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fiksi"
+                android:background="@drawable/chip_bg"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="15sp"
+                android:textColor="#E7E9EF"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Komedi"
+                android:background="@drawable/chip_bg"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="15sp"
+                android:textColor="#E7E9EF"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtFormSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="Form Section"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#EF9D7F" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#7091AD"
+            android:layout_marginVertical="8dp"/>
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Address"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#EF9D7F" />
+
+        <!-- 🏠 Address -->
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:background="@drawable/border"
+            android:padding="12dp"
+            android:minLines="3"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 📞 Phone -->
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 🛒 Button -->
+        <Button
+            android:id="@+id/btnPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Purchase"
+            android:textSize="20sp"
+            android:textColor="#E7E9EF"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@null"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+</ScrollView>
